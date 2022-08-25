@@ -272,23 +272,29 @@ footer section style
         background-color: #FFF9F4;
     }
    .ban-img{
-    width: 100%;
-    display: grid;
+    width: 300px;
+    display: flex;
     justify-content: center;
     align-items: center;
    }
    .card-title h1{
-    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+   }
+   .card{
+    width: 340px;
    }
    .card-row-1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 35px;
    }
    .card-row-2{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 35px;
     margin-bottom: 250px;
    }
 
