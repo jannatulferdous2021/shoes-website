@@ -6,28 +6,47 @@
     text-decoration: none;
     font-family: sans-serif;
 }
- /* topnav----style */
+
+
+
+/* ======
+navbar style 
+========== */
+
 .logo img{
     width: 300px;
-    margin: 20px 50px;
 }
-.navbar{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
     background-color: #FFF9F4;
 }
-.navbar ul{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 10rem);
-    margin-top: 30px;
-    font-family: sans-serif;
+nav ul{
+    display: flex;   
 }
-.navbar ul li a{
-    font-weight: bold;
+nav ul li{
+    margin-left: 40px;
+}
+nav ul li a{
     color: #3C3C3C;
+    font-weight: bold;
+}
+.menu-btn{
+    display: none;
+    color: #000000;
+    font-size: 30px;
+}
+#check{
+    display: none;
 }
 
-/* banner section style */
+/* =======
+banner section style
+============= */
 
 .banner{
     display: grid;
@@ -74,7 +93,9 @@
     font-weight: bold;
 }
 
-/* card section */
+/*===========
+ card section style
+ ============ */
 
 .card-title{
     color: #363958;
@@ -154,7 +175,10 @@
     font-size: 14px;
 }
 
-/* footer section style */
+/* =============
+footer section style
+============= */
+
 .footer-info{
     display: grid;
     grid-template-columns: repeat(auto-fit, 35rem);
@@ -199,21 +223,32 @@
     font-weight: 200;
 }
 
-/* media queries */
+
+
+/* =================
+====media queries=== 
+==================*/
+
+
+
 
 /* portrait phones, less than 576px */
 @media (max-width: 575.98px) { 
+    .menu-btn{
+        position: fixed;
+        right: 30px;
+        display: block;
+    }
+    .logo{
+        position: fixed;
+        left: 10px;
+    }
     .banner{
         display: flex;
         flex-direction: column-reverse;
-        /* margin-top: 200px; */
-        height: 800px;
-        background-color: #FFF9F4;
-   }
-   .ban-info{
-        background-color: #FFF9F4;
-   }
-   .ban-img img{
+        height: 650px;
+    }
+   .ban-img{
     width: 100%;
     display: grid;
     justify-content: center;
@@ -236,12 +271,18 @@
     flex-direction: column-reverse;
    }
    .f-cards{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .f-img{
+    display: flex;
     justify-content: center;
     align-items: center;
    }
    .f-card-icon{
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
    }
@@ -258,27 +299,34 @@
 
 
 
-/* landscape phones, less than 768px */
+/*--------------------
+ landscape phones, less than 768px
+ ------------------------- */
+
+
 @media (max-width: 767.98px) { 
     .banner{
         display: flex;
         flex-direction: column-reverse;
-        height: 1000px;
+        height: 800px;
         justify-content: center;
         align-items: center;
     }
     .card-row-1{
         display: grid;
         grid-gap: 30px;
+        justify-content: center;
+        align-items: center;
     }
     .card-row-2{
         display: grid;
         grid-gap: 30px;
     }
     .card-title{
-        display:grid;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
+    }
+    .card-title h1{
+        font-size: 30px;
     }
     .footer-info{
         display: flex;
@@ -295,8 +343,64 @@
         align-items: center;
        }
  }
-/* tablets, less than 992px */
+
+
+/* --------------
+tablets, less than 992px 
+-------------------*/
+
+
+
 @media (max-width: 991.98px) { 
+
+    .menu-btn{
+       display: block;
+    }
+    nav{
+        background-color: #FFF9F4;
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #FA804C;
+        display: block;
+        text-align: center;
+        transition: all 0.3s;
+    }
+    nav ul li{
+        margin-top: 50px;
+    }
+    nav ul li a{
+        color: #FFFFFF;
+    }
+    nav ul li a:hover{
+        font-size: 20px;
+    }
+    #check:checked~ul{
+        left: 0px;
+    }
+    .banner{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .ban-img{
+        width: 350px;
+    }
+    .ban-info{
+        align-items: center;
+    }
+    .ban-info h1{
+        font-size: 40px;
+    }
+    .footer-cards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .card-title{
         display:grid;
         text-align: center;
@@ -312,8 +416,4 @@
  }
 
 
-/* desktops, less than 1200px */
-@media (max-width: 1199.98px) {
-    
- }
 
