@@ -277,24 +277,25 @@ footer section style
     justify-content: center;
     align-items: center;
    }
-   .card-title h1{
-    display: flex;
-    justify-content: flex-start;
+   .card-title{
+    text-align: center;
+    font-size: 12px;
    }
    .card{
-    width: 340px;
+    width: 300px;
    }
    .card-row-1{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: 35px;
+    margin-left: 110px;
    }
    .card-row-2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 35px;
+    margin-left: 110px;
     margin-bottom: 250px;
    }
 
