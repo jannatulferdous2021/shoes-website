@@ -244,14 +244,11 @@ footer section style
 /* portrait phones, less than 576px */
 @media (max-width: 575.98px) { 
     .menu-btn{
-        position: fixed;
-        right: 60px;
         display: block;
         font-size: 26px;
     }
     .logo{
-        position: fixed;
-        left: 10px;
+        padding-right: 50px;
     }
     .logo img{
         width: 250px;
@@ -282,20 +279,18 @@ footer section style
     font-size: 12px;
    }
    .card{
-    width: 300px;
+    width: 320px;
    }
    .card-row-1{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: 110px;
    }
    .card-row-2{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 110px;
     margin-bottom: 250px;
    }
 
