@@ -243,16 +243,21 @@ footer section style
 
 /* portrait phones, less than 576px */
 @media (max-width: 575.98px) { 
-    .menu-btn{
+     .menu-btn{
+        position: relative;
+        position: absolute;
         display: block;
-        font-size: 26px;
+        left: 290px;
+        top: 40px;
     }
     .logo{
-        padding-right: 50px;
+        position: relative;
     }
     .logo img{
+        position: absolute;
+        right: -160px;
         width: 250px;
-    }
+    } 
     .banner{
         display: flex;
         flex-direction: column-reverse;
@@ -283,7 +288,6 @@ footer section style
    }
    .card-row-1{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
    }
